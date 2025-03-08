@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="./Styles_sheets/styles_account.css">
+    <link rel="stylesheet" href="./Styles_sheets/styles_home.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="Navbar" class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/">
+                        <img src="./asset/logo.png" alt="PAAMAS Global Logo">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <ul class="nav-list">
+                        <li><a href="/" class="nav-link">Home</a></li>
+                        <li><a href="./student_m.html" class="nav-link">Student</a></li>
+                        <li><a href="./product_k.html" class="nav-link">Shop</a></li>
+                        <li><a href="./account.html" class="nav-link">Account</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-toggle">
+                    <button id="mobile-menu-toggle" class="menu-button">
+                        <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="./student_m.html" class="nav-link">Student</a></li>
+                    <li><a href="./product_k.html" class="nav-link">Shop</a></li>
+                    <li><a href="./account.html" class="nav-link">Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="profile-container container">
+        <h1>User Profile</h1>
+        <form id="profile-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" value="John Doe" readonly>
+                <!-- <p id="name1">name</p> -->
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="johndoe@example.com" readonly>
+                <!-- <p id="email1">email</p> -->
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" value="+1234567890">
+                <!-- <p d="contact1">number</p> -->
+            </div>
+            <button type="button" id="logout-btn">Logout</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Logo and Description -->
+                <div class="footer-widget">
+                    <div class="footer-logo">
+                        <img src="./asset/logo.png" alt="Site Logo">
+                    </div>
+                    <h5 class="footer-title">PAAMAS GLOBAL PVT LTD.</h5>
+                    <p class="footer-description">
+                        Brain development is a lifelong process. Nurturing a healthy brain through various activities
+                        and lifestyle choices supports optimal cognitive function and overall well-being.
+                    </p>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="footer-widget">
+                    <h5 class="footer-title">Useful Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="./student_m.html" class="footer-link">Students</a></li>
+                        <li><a href="./product_k.html" class="footer-link">Kit Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-widget">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <ul class="footer-contact">
+                        <li class="footer-contact-item">📍 223 “2nd floor Siddhivinayak Tower Shaheed park Freeganj
+                            Ujjain” M.P.</li>
+                        <li class="footer-contact-item">📞 <a href="tel:+919977774401" class="footer-link">+91
+                                9977774401</a></li>
+                        <li class="footer-contact-item">📞 <a href="tel:+918817480685" class="footer-link">+91
+                                8817480685</a></li>
+                        <li class="footer-contact-item">✉️ <a href="mailto:globalpaamas@gmail.com"
+                                class="footer-link">globalpaamas@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./Script_main/script_account.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link href="./Styles_sheets/styles_student.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="Navbar" class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/">
+                        <img src="./asset/logo.png" alt="logo">
+                    </a>
+                </div>
+    
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <ul class="nav-list">
+                        <li><a href="/" class="nav-link">Home</a></li>
+                        <li><a href="./student_m.html" class="nav-link">Student</a></li>
+                        <li><a href="./product_k.html" class="nav-link">Shop</a></li>
+                    <li><a href="./account.html" class="nav-link">Account</a></li>
+                    </ul>
+                </nav>
+    
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-toggle">
+                    <button id="mobile-menu-toggle" class="menu-button">
+                        <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="./student_m.html" class="nav-link">Student</a></li>
+                    <li><a href="./product_k.html" class="nav-link">Shop</a></li>
+                    <li><a href="./account.html" class="nav-link">Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="main-container container">
+            <!-- Add Student Form -->
+            <div class="add-student-form">
+                <h2 class="form-title">Add Student</h2>
+                <form id="add-student-form" class="form-grid">
+                    <div class="form-field">
+                        <label class="form-label">Name</label>
+                        <input type="text" id="name" class="form-input"  placeholder="data" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Father's Name</label>
+                        <input type="text" id="father" class="form-input"  placeholder="data" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Date of Birth</label>
+                        <input type="date" id="dob" class="form-input"  placeholder="data" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Joining Date</label>
+                        <input type="date" id="joiningDate" class="form-input"  placeholder="data" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Level</label>
+                        <input type="text" id="level" class="form-input"  placeholder="data" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Phone</label>
+                        <input type="text" id="phone" class="form-input"  placeholder="data" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input"  placeholder="data" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Address</label>
+                        <input type="text" id="address" class="form-input"  placeholder="data" required>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="submit-button">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Student Management Table -->
+            <div class="student-table-container">
+                <h2 class="table-title">Student Management</h2>
+                <div class="table-wrapper">
+                    <table class="student-table">
+                        <thead>
+                            <tr class="table-header">
+                                <th class="table-heading">Name</th>
+                                <th class="table-heading">Father's Name</th>
+                                <th class="table-heading">DOB</th>
+                                <th class="table-heading">Joining Date</th>
+                                <th class="table-heading">Current Date</th>
+                                <th class="table-heading">Level</th>
+                                <th class="table-heading">Phone</th>
+                                <th class="table-heading">Email</th>
+                                <th class="table-heading">Address</th>
+                                <th class="table-heading">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="student-table-body">
+                            <!-- Student rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Student Details Card -->
+            <div id="student-details-card" class="details-card">
+                <div class="details-card-content">
+                    <h2 class="details-title">Student Details</h2>
+                    <div class="details-grid">
+                        <div class="details-item">
+                            <p><span class="details-label">Name:</span> <span id="details-name"></span></p>
+                            <p><span class="details-label">Father's Name:</span> <span id="details-father"></span></p>
+                            <p><span class="details-label">Date of Birth:</span> <span id="details-dob"></span></p>
+                            <p><span class="details-label">Joining Date:</span> <span id="details-joiningDate"></span>
+                            </p>
+                            <p><span class="details-label">Current Date:</span> <span id="details-currentDate"></span>
+                            </p>
+                            <p><span class="details-label">Level:</span> <span id="details-level"></span></p>
+                            <p><span class="details-label">Phone:</span> <span id="details-phone"></span></p>
+                            <p><span class="details-label">Email:</span> <span id="details-email"></span></p>
+                            <p><span class="details-label">Address:</span> <span id="details-address"></span></p>
+                        </div>
+                    </div>
+                    <button id="close-details-card" class="close-button">Close</button>
+                </div>
+            </div>
+
+            <!-- Edit Student Form -->
+            <div id="edit-student-form" class="edit-form-modal">
+                <div class="edit-form-content">
+                    <h2 class="edit-form-title">Edit Student</h2>
+                    <form id="edit-form" class="edit-form-grid">
+                        <div class="form-field">
+                            <label class="form-label">Name</label>
+                            <input type="text" id="edit-name" class="form-input"  placeholder="data" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label">Father's Name</label>
+                            <input type="text" id="edit-father" class="form-input"  placeholder="data" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label">Date of Birth</label>
+                            <input type="date" id="edit-dob" class="form-input"  placeholder="data" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label">Joining Date</label>
+                            <input type="date" id="edit-joiningDate" class="form-input"  placeholder="data" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label">Level</label>
+                            <input type="text" id="edit-level" class="form-input"  placeholder="data" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label">Phone</label>
+                            <input type="text" id="edit-phone" class="form-input"  placeholder="data" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label">Email</label>
+                            <input type="email" id="edit-email" class="form-input"  placeholder="data" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label">Address</label>
+                            <input type="text" id="edit-address" class="form-input"  placeholder="data" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="save-button">Save Changes</button>
+                            <button type="button" id="cancel-edit" class="cancel-button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Logo and Description -->
+                <div class="footer-widget">
+                    <div class="footer-logo">
+                        <img src="./asset/logo.png" alt="Site Logo">
+                    </div>
+                    <h5 class="footer-title">PAAMAS GLOBAL PVT LTD.</h5>
+                    <p class="footer-description">
+                        Brain development is a lifelong process. Nurturing a healthy brain through various activities
+                        and lifestyle choices supports optimal cognitive function and overall well-being.
+                    </p>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="footer-widget">
+                    <h5 class="footer-title">Useful Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="./student_m.html" class="footer-link">Students</a></li>
+                        <li><a href="./product_k.html" class="footer-link">Kit Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-widget">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <ul class="footer-contact">
+                        <li class="footer-contact-item">📍 223 “2nd floor Siddhivinayak Tower Shaheed park Freeganj
+                            Ujjain” M.P.</li>
+                        <li class="footer-contact-item">📞 <a href="tel:+919977774401" class="footer-link">+91
+                                9977774401</a></li>
+                        <li class="footer-contact-item">📞 <a href="tel:+918817480685" class="footer-link">+91
+                                8817480685</a></li>
+                        <li class="footer-contact-item">✉️ <a href="mailto:globalpaamas@gmail.com"
+                                class="footer-link">globalpaamas@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./Script_main/script_student_m.js"></script>
+</body>
+
+</html>
